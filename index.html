@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Net</title>
+    <meta name="description" content="Net">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.3.0/collection/icon/icon.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="leftBar" id="mydiv">
+    <nav class="nav navbar">
+        <ul>
+            <li><a href="index.html" class="btn active">link1</a></li>
+            <li><a href="#link2" class="btn">Link2</a></li>
+            <li><a href="javascript:void(0)" class="btn">Link3</a></li>
+            <li><a href="javascript:void(0)" class="btn">Link4</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="content" style="position: fixed; right: 0;">
+    <div class="row">
+        <div id="link2" class="hide" style="display: none;">
+            link2 content
+        </div>
+    </div>
+</div>
+<script type="application/javascript" rel="script" src="jquery-3.3.1.min.js"></script>
+</body>
+<script>
+    // Get the container element
+    var btnContainer = document.getElementById("mydiv");
+
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName("btn");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            $('#link2').show();
+        });
+    }
+</script>
+<script>
+    function openCity(cityName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(cityName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</html>
