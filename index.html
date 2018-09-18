@@ -6,28 +6,144 @@
     <title>Net</title>
     <meta name="description" content="Net">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.3.0/collection/icon/icon.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="leftBar" id="mydiv">
     <nav class="nav navbar">
+        <div></div>
         <ul>
-            <li><a href="index.html" class="btn active">link1</a></li>
-            <li><a href="#link2" class="btn">Link2</a></li>
-            <li><a href="javascript:void(0)" class="btn">Link3</a></li>
-            <li><a href="javascript:void(0)" class="btn">Link4</a></li>
+            <li><a href="index.html" class="btn active shadow"><span>15</span></a></li>
+            <li><a href="#link2" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
+            <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
+            <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
+            <li><a href="javascript:void(0)" class="btn shadow"></a></li>
+            <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
         </ul>
     </nav>
 </div>
-<div class="content" style="position: fixed; right: 0;">
-    <div class="row">
-        <div id="link2" class="hide" style="display: none;">
-            link2 content
+<div class="main-container">
+    <div class="heading">
+        <h3>35 Search Results <span>for "Preview"</span></h3>
+    </div>
+    <div class="container">
+        <div class="p-2">
+            <div class="search_box shadow-2">
+                <span><i class="fa fa-search"></i></span>
+                <input type="search" placeholder="Preview" class="form-control" id="search">
+                <label for="search"></label>
+            </div>
+            <div class="checkboxes">
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="todos" name="check" checked />
+                        <label for="todos">Todos</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="discussion" name="check" checked />
+                        <label for="discussion">Discussions</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="files" name="check"  />
+                        <label for="files">Files</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="progress" name="check" />
+                        <label for="progress">Progress</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="events" name="check" />
+                        <label for="events">Events</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" value="None" id="team" name="check" />
+                        <label for="team">Team Members</label>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline flex-box full-wide">
+                <div class="medium-80 small-100 timeline-bar">
+                    <div class="timeline-preview flex-box date-icon">
+                        <div class="medium"><span class="inline-b"><img src="img/doc-icon.png" class="img" alt="doc-icon" title="Docs"> </span></div>
+                        <div class="medium">
+                            <h4>preview_timeline_v1.jpg &nbsp; </h4><span class="tag">tag</span>
+                            <p>Attached to the comment &nbsp;<a href="javascript:void(0)">timeline_wireframe</a> &nbsp; By <small><a href="javascript:void(0)">Bharat</a></small> </p>
+                            <a class="download" download="">download</a>
+                            <div class="tags"><p><a href="javascript:void(0)">timeline</a><b><a href="javascript:void(0)">x</a></b></p> </div>
+                        </div>
+                    </div>
+                    <div class="image-container flex-box date-icon timeline-preview">
+                        <div class="medium-40 small-100">
+                            <figure>
+                                <img src="img/preview-1.jpg" class="img" alt="preview-1" title="Preview Timeline v1">
+                            </figure>
+                            <h4>preview_timeline_v1.jpg &nbsp; </h4><span class="tag">tag</span>
+                            <p>By <a href="javascript:void(0)">Bharat</a> </p>
+                            <a href="javascript:void(0)" class="download" download="">download</a>
+                        </div>
+                        <div class="medium-40 small-100">
+                            <figure>
+                                <img src="img/preview-1.jpg" class="img" alt="preview-1" title="Preview Timeline v1">
+                            </figure>
+                            <h4>preview_timeline_v1.jpg &nbsp; </h4><span class="tag">tag</span>
+                            <p>By <a href="javascript:void(0)">Bharat</a> </p>
+                            <a href="javascript:void(0)" class="download" download="">download</a>
+                        </div>
+                    </div>
+                    <div class="flex-box date-icon timeline-preview ">
+                        <div class="medium-70 small-100">
+                            <div class="flex-box">
+                                <div class="medium"><span class="inline-b"><img src="img/excel-icon.png" class="img" alt="doc-icon" title="Docs"> </span></div>
+                                <div class="medium">
+                                    <h4>preview_timeline_v1.jpg &nbsp; </h4><span class="tag">tag</span>
+                                    <p>Attached to the comment &nbsp;<a href="javascript:void(0)">timeline_wireframe</a> &nbsp; By <small><a href="javascript:void(0)">Bharat</a></small> </p>
+                                    <a class="download" download="">download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-box profile-section date-icon">
+                        <div class="medium-20">
+                            <figure><img src="img/profile.jpg" class="img" alt="profile" title="Profile"> </figure>
+                            <h5>Aashish Solanki</h5>
+                            <p><i>1 July 2013</i></p>
+                        </div>
+                        <div class="medium-70">
+                            <h5>Discussion name will go here</h5>
+                            <p>I like the clean look of the UI, but one of the issues I have is that it seems to encou<span class="highlight">rage a context shift for</span> the user frequently For eg. Tasks and scheduler are closely tied together. </p>
+                            <small>under &nbsp;<a href="javascript:void(0)">Sharing of final Proposal</a> </small>
+                        </div>
+                    </div>
+                    <div class="flex-box profile-section date-icon">
+                        <div class="small-100 profile-bottom">
+                            <p>praesent ornare, mauris volutpat <span class="highlight"> ornare imperdiet, eque</span> tortor condimentum urna, ut laoreet neque mauris in urna. </p>
+                            <p><small>Bharat</small> &nbsp; <small>4 comments</small></p>
+                            <br />
+                            <p class="strike">praesent ornare, mauris volutpat ornare imperdiet, eque tortor condimentum urna, ut laoreet neque mauris in urna. </p>
+                            <p><small>Bharat</small> &nbsp; <small>4 comments</small></p>
+                        </div>
+                    </div>
+                    <div class="flex-box button">
+                        <div class="full-wide small-100">
+                            <a href="javascript:void(0)" class="primary">Show More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<script type="application/javascript" rel="script" src="jquery-3.3.1.min.js"></script>
+    <script type="application/javascript" rel="script" src="jquery-3.3.1.min.js"></script>
 </body>
 <script>
     // Get the container element
@@ -69,6 +185,6 @@
     }
 
     // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    //document.getElementById("defaultOpen").click();
 </script>
 </html>
