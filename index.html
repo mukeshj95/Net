@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Net</title>
+    <title>Netbramha - Assignment</title>
     <meta name="description" content="Net">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,14 +12,15 @@
 <body>
 <div class="leftBar" id="mydiv">
     <nav class="nav navbar">
-        <div></div>
-        <ul>
+        <div class="sample"></div>
+        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span class="toggle-icon"></span></a></div>
+        <ul class="nav-list">
             <li><a href="index.html" class="btn active shadow"><span>15</span></a></li>
             <li><a href="#link2" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
             <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
             <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
             <li><a href="javascript:void(0)" class="btn shadow"></a></li>
-            <li><a href="javascript:void(0)" class="btn shadow"><span><i class="fa fa-plus"></i></span></a></li>
+            <li class="active"><a href="javascript:void(0)" class="btn shadow"></a></li>
         </ul>
     </nav>
 </div>
@@ -143,8 +144,10 @@
             </div>
         </div>
     </div>
-    <script type="application/javascript" rel="script" src="jquery-3.3.1.min.js"></script>
+</div>
+<script type="application/javascript" rel="script" src="jquery-3.3.1.min.js"></script>
 </body>
+<!------ Scripts ------>
 <script>
     // Get the container element
     var btnContainer = document.getElementById("mydiv");
@@ -186,5 +189,28 @@
 
     // Get the element with id="defaultOpen" and click on it
     //document.getElementById("defaultOpen").click();
+    (function($) { // Begin jQuery
+        $(function() { // DOM ready
+            // If a link has a dropdown, add sub menu toggle.
+            $('nav ul li a:not(:only-child)').click(function(e) {
+                $(this).siblings('.nav-dropdown').toggle();
+                // Close one dropdown when selecting another
+                $('.nav-dropdown').not($(this).siblings()).hide();
+                e.stopPropagation();
+            });
+            // Clicking away from dropdown will remove the dropdown class
+            $('html').click(function() {
+                $('.nav-dropdown').hide();
+            });
+            // Toggle open and close nav styles on click
+            $('#nav-toggle').click(function() {
+                $('nav ul').slideToggle();
+            });
+            // Hamburger to X toggle
+            $('#nav-toggle').on('click', function() {
+                this.classList.toggle('active');
+            });
+        }); // end DOM ready
+    })(jQuery);
 </script>
 </html>
